@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'profile' => 'Profile',
+    'job' => 'Current Job: ',
+    'coin' => 'Coin: ',
+    'account' => 'Account',
+    'friendlist' => 'Friend List',
+    'accFR' => 'Accept Friend Requests',
+    'accInfo' => 'Account Information',
+    'topUp'=> 'Top Up Coin',
+    'logout' => 'Logout',
+    'name' => 'Name',
+    'email' => 'Email',
+    'gender' => 'Gender',
+    'fow' => 'Field of Work',
+    'linkedin' => 'LinkedIn Username',
+    'phone' => 'Phone Number',
+    'visibility' => 'Profile Visibility',
+    'visible' => 'Profile Visible',
+    'invisible' => 'Profile Invisible',
+    'visibilityInfo' => 'You will be charged 50 coins to hide your profile. Your profile picture will also be updated to a bear image.',
+    'showProfileInfo' => 'You will be charged 5 coins to show your profile. Your profile picture will also be updated to default image.',
+    'pending' => 'Pending Friend Requests',
+    'accept' => 'Accept',
+    'decline' => 'Decline',
+];
