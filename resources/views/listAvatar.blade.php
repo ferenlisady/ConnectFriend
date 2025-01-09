@@ -22,11 +22,13 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ $avatar->name }}</h5>
                         <p class="card-text">@lang('avatar.price'){{ $avatar->price }} @lang('avatar.coin')</p>
-                        <form action="{{ route('avatar.purchase', $avatar->id) }}" method="POST">
-                            @csrf
-                            <button type="submit" class="btn"
-                                style="background-color: #183F23; color: white;">@lang('avatar.buy')</button>
-                        </form>
+                        @if (Auth::user())
+                            <form action="{{ route('avatar.purchase', $avatar->id) }}" method="POST">
+                                @csrf
+                                <button type="submit" class="btn"
+                                    style="background-color: #183F23; color: white;">@lang('avatar.buy')</button>
+                            </form>
+                        @endif
                     </div>
                 </div>
             </div>

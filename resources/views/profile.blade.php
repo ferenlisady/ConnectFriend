@@ -21,7 +21,8 @@
 
                     <form method="POST" action="{{ route('topUpCoin') }}">
                         @csrf
-                        <button type="submit" name="top-up button" class="btn btn-success mt-2">@lang('profile.topUp')</button>
+                        <button type="submit" name="top-up button"
+                            class="btn btn-success mt-2">@lang('profile.topUp')</button>
                     </form>
 
                     <ul class="list-unstyled mt-4">
@@ -57,7 +58,7 @@
                             <p><strong>@lang('profile.email'): </strong> {{ $user->email }}</p>
                             <p><strong>@lang('profile.gender'): </strong> {{ $user->gender }}</p>
                             <p><strong>@lang('profile.fow'): </strong> {{ $user->field_of_work }}</p>
-                            <p><strong>@lang('profile.linkedind'): </strong> {{ $user->linkedin_username }}</p>
+                            <p><strong>@lang('profile.linkedin'): </strong> {{ $user->linkedin_username }}</p>
                             <p><strong>@lang('profile.phone'): </strong> {{ $user->phone_number }}</p>
                             <p><strong>@lang('profile.job')</strong> {{ $user->current_job }}</p>
                             <p><strong>@lang('profile.coin')</strong> {{ $user->coin }}</p>
@@ -91,20 +92,21 @@
 
                         <button type="submit" class="btn mt-3 px-5 py-2 rounded-3 border-0"
                             style="background-color: #183F23; color: white;">
-                            {{ $user->visibility ? 'Make Invisible' : 'Make Visible' }}
+                            {{ $user->visibility ? __('profile.makeInvisible') : __('profile.makeVisible') }}
                         </button>
 
                         @if(session('success'))
                             <div class="alert alert-success mt-3">
-                                {{ session('success') }}
+                                {{ __(session('success')) }}
                             </div>
                         @endif
 
                         @if(session('error'))
                             <div class="alert alert-danger mt-3">
-                                {{ session('error') }}
+                                {{ __(session('error')) }}
                             </div>
                         @endif
+
                     </form>
                 </div>
             </div>

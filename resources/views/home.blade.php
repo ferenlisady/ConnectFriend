@@ -7,9 +7,9 @@
     <div class="row justify-content-between align-items-center my-5">
         <!-- Search Form -->
         <div class="col-lg-3 col-md-4 col-sm-12">
-            <form class="d-flex flex-row align-items-center" method="GET" action="{{ route('users.index') }}">
+            <form class="d-flex flex-row align-items-center" method="GET" action="{{ route('home') }}">
                 <input class="form-control me-2" type="search" placeholder="@lang('home.searchBar')" aria-label="Search"
-                    name="job" value="{{ request('job') }}" style="flex: 1; border-color: var(--darkgreen);">
+                    name="field_of_work" value="{{ request('field_of_work') }}" style="flex: 1; border-color: var(--darkgreen);">
                 <button class="btn btn-outline-search" type="submit"
                     style="color: var(--darkgreen); border-color: var(--darkgreen);">
                     @lang('home.search')
@@ -19,7 +19,7 @@
 
         <!-- Filter Form -->
         <div class="col-lg-2 col-md-4 col-sm-12">
-            <form method="GET" action="{{ route('users.index') }}" class="d-inline-block d-flex align-items-center">
+            <form method="GET" action="{{ route('home') }}" class="d-inline-block d-flex align-items-center">
                 <select name="gender" id="gender" class="form-select"
                     style="width: 100%; color: var(--darkgreen); border-color: var(--darkgreen);"
                     onchange="this.form.submit()">

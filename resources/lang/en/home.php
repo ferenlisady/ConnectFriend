@@ -1,12 +1,12 @@
 <?php
 
-return[
+return [
     'search' => 'Search',
-    'searchBar' => 'Search by job',
+    'searchBar' => 'Search by field of work',
     'filterbygender' => 'Filter by gender',
     'male' => 'Male',
     'female' => 'Female',
-    'nouser' => 'No users found with the specified job',
+    'nouser' => 'No users found with the specified field of work',
     'profession' => 'Profession: ',
     'fow' => 'Field Of Work: ',
     'addFriend' => 'Add Friend',

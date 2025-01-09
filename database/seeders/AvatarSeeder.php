@@ -15,13 +15,6 @@ class AvatarSeeder extends Seeder
     {
         $avatars = [
             [
-                'name' => 'Cool Avatar',
-                'price' => 70,
-                'image' => 'assets/cool_avatar.png',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
                 'name' => 'Superhero Avatar',
                 'price' => 110,
                 'image' => 'assets/superhero_avatar.png',

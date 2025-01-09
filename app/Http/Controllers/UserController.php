@@ -12,11 +12,13 @@ class UserController extends Controller
     {
         // Fetch all users except the authenticated user
         $query = User::where('id', '!=', auth()->id())
+            ->where('visibility', true)
             ->select(['id', 'name', 'current_job', 'field_of_work', 'profile_picture', 'visibility']);
 
+
         // Apply search by job
-        if ($request->has('job') && $request->job != '') {
-            $query->where('current_job', 'like', '%' . $request->job . '%');
+        if ($request->has('field_of_work') && $request->field_of_work != '') {
+            $query->where('field_of_work', 'like', '%' . $request->field_of_work . '%');
         }
 
         // Apply gender filter 

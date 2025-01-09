@@ -40,16 +40,16 @@ class ProfileController extends Controller
 
             $authUser->save();
 
-            return back()->with('success', 'Profile visibility set to invisible and 10 coins deducted.');
+            return back()->with('success', __('profile.invisibleSuccess'));
         } else if (!$authUser->visibility && $authUser->coin >= 5) {
             $authUser->coin -= 5;
             $authUser->visibility = true;
             $authUser->profile_picture = 'assets/default.png';
             $authUser->save();
 
-            return back()->with('success', 'Profile visibility set to visible.');
+            return back()->with('success', __('profile.visibleSuccess'));
         }
 
-        return back()->with('error', 'Action cannot be performed. Ensure your have enough coin');
+        return back()->with('error', ' __(profile.coinNotEnough)');
     }
 }
